@@ -37,9 +37,12 @@ class AIChatViewModel(private val chatRepository: ChatRepository = ChatRepositor
         if(inputText.isEmpty()){
             return
         }
+
+        // 添加用户消息
+        val userMessageId = messageIdCounter++
         _uiState.update { currentState->
             val userMessage= ChatMessage(
-                id=messageIdCounter++,
+                id=userMessageId,
                 text = inputText,
                 isUser = true
             )
@@ -50,40 +53,90 @@ class AIChatViewModel(private val chatRepository: ChatRepository = ChatRepositor
                 error = null
             )
         }
-        viewModelScope.launch {
-            val result=chatRepository.sendMessage(
-                userMessage = inputText,
-                chatHistory = _uiState.value.chatMessages
-            )
 
-            result.fold(
-                onSuccess = { assistantResponse ->
-                    // 成功：添加 AI 回复消息
-                    _uiState.update { currentState ->
-                        val assistantMessage = ChatMessage(
-                            id = messageIdCounter++,
-                            text = assistantResponse,
-                            isUser = false
-                        )
-                        currentState.copy(
-                            chatMessages = currentState.chatMessages + assistantMessage,
-                            isLoading = false,
-                            error = null
-                        )
-                    }
-                },
-                onFailure = { exception ->
-                    // 失败：显示错误信息
-                    _uiState.update { currentState ->
-                        currentState.copy(
-                            isLoading = false,
-                            error = exception.message ?: "未知错误"
-                        )
-                    }
-                    Log.e("AIChatViewModel", "Send message failed", exception)
-                }
+        // 创建 AI 消息占位符
+        val assistantMessageId = messageIdCounter++
+        var assistantMessage = ChatMessage(
+            id = assistantMessageId,
+            text = "",
+            isUser = false,
+            isLoading = true
+        )
+
+        // 添加空的 AI 消息到列表
+        _uiState.update { currentState ->
+            currentState.copy(
+                chatMessages = currentState.chatMessages + assistantMessage
             )
         }
+
+        viewModelScope.launch {
+            chatRepository.sendMessageStream(
+                userMessage = inputText,
+                chatHistory = _uiState.value.chatMessages.filter { it.id != assistantMessageId }
+            ).collect { result ->
+                result.fold(
+                    onSuccess = { contentChunk ->
+                        // 累积流式内容Log
+                        Log.d("AIChatViewModel", "Received chunk: $contentChunk")
+                        assistantMessage = assistantMessage.copy(
+
+                            text = assistantMessage.text + contentChunk,
+                            isLoading = true
+                        )
+
+                        // 更新 UI
+                        _uiState.update { currentState ->
+                            val updatedMessages = currentState.chatMessages.map { message ->
+                                if (message.id == assistantMessageId) {
+                                    assistantMessage
+                                } else {
+                                    message
+                                }
+                            }
+                            currentState.copy(
+                                chatMessages = updatedMessages,
+                                isLoading = true
+                            )
+                        }
+                    },
+                    onFailure = { exception ->
+                        // 流式响应完成或出错
+                        _uiState.update { currentState ->
+                            val updatedMessages = currentState.chatMessages.map { message ->
+                                if (message.id == assistantMessageId) {
+                                    assistantMessage.copy(isLoading = false)
+                                } else {
+                                    message
+                                }
+                            }
+                            currentState.copy(
+                                chatMessages = updatedMessages,
+                                isLoading = false,
+                                error = exception.message ?: "未知错误"
+                            )
+                        }
+                        Log.e("AIChatViewModel", "Stream failed", exception)
+                    }
+                )
+            }
+
+            // 流式响应完成，标记为不再加载
+            _uiState.update { currentState ->
+                val updatedMessages = currentState.chatMessages.map { message ->
+                    if (message.id == assistantMessageId) {
+                        assistantMessage.copy(isLoading = false)
+                    } else {
+                        message
+                    }
+                }
+                currentState.copy(
+                    chatMessages = updatedMessages,
+                    isLoading = false
+                )
+            }
+        }
+
 
     }
     private fun clearChar(){

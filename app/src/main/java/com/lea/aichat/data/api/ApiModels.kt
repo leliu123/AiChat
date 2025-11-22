@@ -11,7 +11,9 @@ data class ChatRequest(
     @SerializedName("temperature")
     val temperature: Double = 0.7,
     @SerializedName("max_tokens")
-    val maxTokens: Int = 2000
+    val maxTokens: Int = 2000,
+    @SerializedName("stream")
+    val stream: Boolean = true  // 启用流式响应
 )
 
 data class Message(

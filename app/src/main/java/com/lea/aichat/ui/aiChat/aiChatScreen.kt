@@ -183,17 +183,12 @@ fun ChatMessageItem(chatMessage: ChatMessage) {
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     Spacer(modifier = Modifier.height(4.dp))
-                    if(chatMessage.isLoading){
-                        CircularProgressIndicator(
-                            modifier = Modifier.size(16.dp),
-                            color = MaterialTheme.colorScheme.primary
-                        )
-                    }else{
-                        Text(
+
+                    Text(
                             text = chatMessage.text,
                             style = MaterialTheme.typography.bodyMedium
                         )
-                    }
+
                 }
 
 

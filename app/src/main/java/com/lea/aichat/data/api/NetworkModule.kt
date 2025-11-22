@@ -18,7 +18,9 @@ object NetworkModule {
         .create()
 
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
-        level = HttpLoggingInterceptor.Level.BODY
+        // 改为 NONE 或 HEADERS，避免缓冲响应体
+        // BODY 级别会缓冲整个响应用于日志，导致流式响应延迟
+        level = HttpLoggingInterceptor.Level.HEADERS
     }
 
     private val okHttpClient: OkHttpClient = OkHttpClient.Builder()
@@ -28,11 +30,20 @@ object NetworkModule {
             val requestBuilder = original.newBuilder()
                 .header("Authorization", "Bearer $API_KEY")
                 .header("Content-Type", "application/json")
+            
+            // 如果是流式请求，添加 Accept 头
+            val url = original.url.toString()
+            if (url.contains("chat/completions")) {
+                // 检查是否是流式请求（通过检查请求体中的 stream 参数）
+                // 或者直接为所有 chat/completions 请求添加
+                requestBuilder.header("Accept", "text/event-stream")
+            }
+            
             val request = requestBuilder.build()
             chain.proceed(request)
         }
         .connectTimeout(30, TimeUnit.SECONDS)
-        .readTimeout(30, TimeUnit.SECONDS)
+        .readTimeout(0, TimeUnit.SECONDS)  // 流式响应设置为 0（无限等待）
         .writeTimeout(30, TimeUnit.SECONDS)
         .build()
 
