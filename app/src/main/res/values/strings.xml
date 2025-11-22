@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AiChat</string>
+    <string name="aiName">AI 聊天助手</string>
+    <string name="clearChat">清空聊天</string>
+</resources>
