@@ -1,4 +1,4 @@
-package com.lea.aichat.data.api
+package com.lea.aichat.data.AIChat.api
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.Body

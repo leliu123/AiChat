@@ -1,14 +1,15 @@
 package com.lea.aichat.ui.aiChat
 
 import android.util.Log
+import androidx.compose.ui.layout.Layout
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.lea.aichat.data.chat.ChatMessage
-import com.lea.aichat.data.repository.ChatRepository
-import com.lea.aichat.ui.aiChat.ChatUiState
+import com.lea.aichat.data.AIChat.chat.ChatMessage
+import com.lea.aichat.data.AIChat.repository.ChatRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
@@ -16,6 +17,26 @@ class AIChatViewModel(private val chatRepository: ChatRepository = ChatRepositor
     private val _uiState = MutableStateFlow(ChatUiState())
     val uiState: StateFlow<ChatUiState> = _uiState.asStateFlow()
     private var messageIdCounter = 0L
+    init {
+        loadChatHistory()
+    }
+    private fun loadChatHistory(){
+        viewModelScope.launch{
+            try{
+                val messages=chatRepository.getAllMessages().first()
+                if (messages.isNotEmpty()){
+                    messageIdCounter=(messages.maxOfOrNull { it.id } ?: -1L)+1
+                    _uiState.update { currentState ->
+                        currentState.copy(chatMessages = messages)
+                    }
+                    Log.d("AIChatViewModel", "Loaded ${messages.size} messages from database")
+                }
+
+            }catch (e: Exception) {
+                Log.e("AIChatViewModel", "Error loading chat history", e)
+            }
+        }
+    }
     fun processIntent(intent: ChatIntent) {
         when(intent) {
             is ChatIntent.InputTextChange -> {
@@ -40,6 +61,19 @@ class AIChatViewModel(private val chatRepository: ChatRepository = ChatRepositor
 
         // 添加用户消息
         val userMessageId = messageIdCounter++
+
+        val userMessage = ChatMessage(
+            id=userMessageId,
+            text = inputText,
+            isUser = true
+        )
+        // 保存用户消息到数据库
+        viewModelScope.launch {
+            chatRepository.saveMessage(userMessage)
+            Log.d("AIChatViewModel", "Saved user message with ID: $userMessageId")
+        }
+
+
         _uiState.update { currentState->
             val userMessage= ChatMessage(
                 id=userMessageId,
@@ -120,12 +154,14 @@ class AIChatViewModel(private val chatRepository: ChatRepository = ChatRepositor
                     }
                 )
             }
+            assistantMessage = assistantMessage.copy(isLoading = false)
+            chatRepository.saveMessage(assistantMessage)
 
             // 流式响应完成，标记为不再加载
             _uiState.update { currentState ->
                 val updatedMessages = currentState.chatMessages.map { message ->
                     if (message.id == assistantMessageId) {
-                        assistantMessage.copy(isLoading = false)
+                        assistantMessage
                     } else {
                         message
                     }
@@ -135,11 +171,16 @@ class AIChatViewModel(private val chatRepository: ChatRepository = ChatRepositor
                     isLoading = false
                 )
             }
+
         }
 
 
     }
     private fun clearChar(){
+        viewModelScope.launch {
+            // 清空数据库
+            chatRepository.clearAllMessages()
+        }
         _uiState.update { currentState ->
             currentState.copy(
                 chatMessages = emptyList(),

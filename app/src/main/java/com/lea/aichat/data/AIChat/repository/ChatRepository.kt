@@ -1,24 +1,96 @@
-package com.lea.aichat.data.repository
+package com.lea.aichat.data.AIChat.repository
 
 import android.util.Log
-import com.lea.aichat.data.api.ApiService
-import com.lea.aichat.data.api.ChatRequest
-import com.lea.aichat.data.api.Message
-import com.lea.aichat.data.api.NetworkModule
-import com.lea.aichat.data.chat.ChatMessage
+import com.lea.aichat.DataBsae.ChatDatabase
+import com.lea.aichat.data.AIChat.Entity.ChatMessageEntity
+import com.lea.aichat.data.AIChat.api.ApiService
+import com.lea.aichat.data.AIChat.api.ChatRequest
+import com.lea.aichat.data.AIChat.api.Message
+import com.lea.aichat.data.AIChat.api.NetworkModule
+import com.lea.aichat.data.AIChat.chat.ChatMessage
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 import java.io.IOException
-import com.lea.aichat.data.api.SseParser
+import com.lea.aichat.data.AIChat.api.SseParser
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 
 class ChatRepository(
-    private val apiService: ApiService = NetworkModule.apiService
+    private val apiService: ApiService = NetworkModule.apiService,
+    private val database: ChatDatabase?=null
+
 ) {
+    // 将 Entity 转换为 ChatMessage
+    private fun ChatMessageEntity.toChatMessage(): ChatMessage{
+        return ChatMessage(
+            id = this.id,
+            text = this.text,
+            isUser = this.isUser,
+            isLoading = false,
+            timestamp = this.timestamp
+        )
+    }
+
+    // 将 ChatMessage 转换为 Entity
+    private fun ChatMessage.toChatMessageEntity(): ChatMessageEntity{
+        return ChatMessageEntity(
+            id = this.id,
+            text = this.text,
+            isUser = this.isUser,
+            timestamp = this.timestamp
+        )
+    }
+    // 从数据库加载所有消息
+    // 从数据库加载所有消息
+    fun getAllMessages(): Flow<List<ChatMessage>> {
+        return database?.chatMessageDao()?.getAllMessages()
+            ?.map { entities -> entities.map { it.toChatMessage() } }
+            ?: flow { emit(emptyList()) }
+    }
+
+    // 保存消息到数据库
+    suspend fun saveMessage(message: ChatMessage) {
+        withContext(Dispatchers.IO) {
+            try {
+                database?.chatMessageDao()?.insertMessage(message.toChatMessageEntity())
+            } catch (e: Exception) {
+                Log.e("ChatRepository", "Error saving message", e)
+            }
+        }
+    }
+
+    // 批量保存消息
+    suspend fun saveMessages(messages: List<ChatMessage>) {
+        withContext(Dispatchers.IO) {
+            try {
+                database?.chatMessageDao()?.insertMessages(messages.map { it.toChatMessageEntity() })
+            } catch (e: Exception) {
+                Log.e("ChatRepository", "Error saving messages", e)
+            }
+        }
+    }
+
+    // 清空所有消息
+    suspend fun clearAllMessages() {
+        withContext(Dispatchers.IO) {
+            try {
+                database?.chatMessageDao()?.deleteAllMessages()
+            } catch (e: Exception) {
+                Log.e("ChatRepository", "Error clearing messages", e)
+            }
+        }
+    }
+
+
+
+
+
+
+
     suspend fun sendMessage(
         userMessage: String,
         chatHistory: List<ChatMessage>

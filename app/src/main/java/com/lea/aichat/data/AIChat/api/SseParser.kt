@@ -1,4 +1,4 @@
-package com.lea.aichat.data.api
+package com.lea.aichat.data.AIChat.api
 import android.util.Log
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow

@@ -1,6 +1,6 @@
 package com.lea.aichat.ui.aiChat
 
-import com.lea.aichat.data.chat.ChatMessage
+import com.lea.aichat.data.AIChat.chat.ChatMessage
 
 data class ChatUiState(
     val chatMessages: List<ChatMessage> = emptyList(),

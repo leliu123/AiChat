@@ -1,4 +1,4 @@
-package com.lea.aichat.data.chat
+package com.lea.aichat.data.AIChat.chat
 
 data class ChatMessage(
     val id : Long,
