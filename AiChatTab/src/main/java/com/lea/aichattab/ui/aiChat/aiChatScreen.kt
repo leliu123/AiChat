@@ -1,4 +1,4 @@
-package com.lea.aichat.ui.aiChat
+package com.lea.aichattab.ui.aiChat
 
 import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
@@ -29,18 +29,20 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.lea.aichat.ui.theme.AiChatTheme
-import com.lea.aichat.data.AIChat.chat.ChatMessage
-import com.lea.aichat.ui.aiChat.AIChatViewModelFactory
+import com.lea.aichattab.ui.theme.AiChatTheme
+import com.lea.aichattab.AIChat.chat.ChatMessage
+import com.lea.aichattab.ui.aiChat.AIChatViewModelFactory
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
-import com.lea.aichat.R
+import com.lea.aichattab.R
 import androidx.lifecycle.viewmodel.compose.viewModel
 import dev.jeziellago.compose.markdowntext.MarkdownText
+import kotlin.collections.isNotEmpty
+
 @Composable
 fun AiChatScreen(
     viewModel: AIChatViewModel= viewModel(factory = AIChatViewModelFactory(LocalContext.current)),

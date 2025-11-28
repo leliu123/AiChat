@@ -1,4 +1,4 @@
-package com.lea.aichat.ui.aiChat
+package com.lea.aichattab.ui.aiChat
 
 import android.util.Log
 import androidx.compose.ui.layout.Layout

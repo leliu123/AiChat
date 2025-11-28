@@ -9,6 +9,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+
     }
 }
 dependencyResolutionManagement {
@@ -16,9 +17,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+        flatDir {
+            dirs("app/libs")
+        }
     }
 }
 
 rootProject.name = "AiChat"
 include(":app")
- 
+include(":AiChatTab")

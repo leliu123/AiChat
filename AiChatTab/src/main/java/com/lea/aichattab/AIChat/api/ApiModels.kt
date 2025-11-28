@@ -1,4 +1,4 @@
-package com.lea.aichat.data.AIChat.api
+package com.lea.aichattab.AIChat.api
 
 import com.google.gson.annotations.SerializedName
 

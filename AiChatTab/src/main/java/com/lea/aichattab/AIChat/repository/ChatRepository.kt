@@ -1,4 +1,4 @@
-package com.lea.aichat.data.AIChat.repository
+package com.lea.aichattab.AIChat.repository
 
 import android.util.Log
 import com.lea.aichat.DataBsae.ChatDatabase
