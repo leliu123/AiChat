@@ -1,0 +1,242 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.lea.aichat.test" >
+4
+5    <uses-sdk
+5-->D:\AiChat\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest13249838631809642396.xml:5:5-74
+6        android:minSdkVersion="24"
+6-->D:\AiChat\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest13249838631809642396.xml:5:15-41
+7        android:targetSdkVersion="24" />
+7-->D:\AiChat\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest13249838631809642396.xml:5:42-71
+8
+9    <instrumentation
+9-->D:\AiChat\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest13249838631809642396.xml:11:5-15:69
+10        android:name="androidx.test.runner.AndroidJUnitRunner"
+10-->D:\AiChat\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest13249838631809642396.xml:11:22-76
+11        android:functionalTest="false"
+11-->D:\AiChat\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest13249838631809642396.xml:14:22-52
+12        android:handleProfiling="false"
+12-->D:\AiChat\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest13249838631809642396.xml:13:22-53
+13        android:label="Tests for com.lea.aichat.test"
+13-->D:\AiChat\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest13249838631809642396.xml:15:22-67
+14        android:targetPackage="com.lea.aichat.test" />
+14-->D:\AiChat\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest13249838631809642396.xml:12:22-65
+15
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:5-67
+16-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:22-64
+17    <uses-permission android:name="android.permission.REORDER_TASKS" />
+17-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:24:5-72
+17-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:24:22-69
+18
+19    <permission
+19-->[androidx.core:core:1.17.0] C:\Users\22911\.gradle\caches\8.13\transforms\cdb89893e87f3e05118b40058f6f7961\transformed\core-1.17.0\AndroidManifest.xml:22:5-24:47
+20        android:name="com.lea.aichat.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+20-->[androidx.core:core:1.17.0] C:\Users\22911\.gradle\caches\8.13\transforms\cdb89893e87f3e05118b40058f6f7961\transformed\core-1.17.0\AndroidManifest.xml:23:9-81
+21        android:protectionLevel="signature" />
+21-->[androidx.core:core:1.17.0] C:\Users\22911\.gradle\caches\8.13\transforms\cdb89893e87f3e05118b40058f6f7961\transformed\core-1.17.0\AndroidManifest.xml:24:9-44
+22
+23    <uses-permission android:name="com.lea.aichat.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+23-->[androidx.core:core:1.17.0] C:\Users\22911\.gradle\caches\8.13\transforms\cdb89893e87f3e05118b40058f6f7961\transformed\core-1.17.0\AndroidManifest.xml:26:5-97
+23-->[androidx.core:core:1.17.0] C:\Users\22911\.gradle\caches\8.13\transforms\cdb89893e87f3e05118b40058f6f7961\transformed\core-1.17.0\AndroidManifest.xml:26:22-94
+24
+25    <queries>
+25-->[androidx.test:runner:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\e17c1f8c07c828a24abfc3f14b2db168\transformed\runner-1.7.0\AndroidManifest.xml:24:5-28:15
+26        <package android:name="androidx.test.orchestrator" />
+26-->[androidx.test:runner:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\e17c1f8c07c828a24abfc3f14b2db168\transformed\runner-1.7.0\AndroidManifest.xml:25:9-62
+26-->[androidx.test:runner:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\e17c1f8c07c828a24abfc3f14b2db168\transformed\runner-1.7.0\AndroidManifest.xml:25:18-59
+27        <package android:name="androidx.test.services" />
+27-->[androidx.test:runner:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\e17c1f8c07c828a24abfc3f14b2db168\transformed\runner-1.7.0\AndroidManifest.xml:26:9-58
+27-->[androidx.test:runner:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\e17c1f8c07c828a24abfc3f14b2db168\transformed\runner-1.7.0\AndroidManifest.xml:26:18-55
+28        <package android:name="com.google.android.apps.common.testing.services" />
+28-->[androidx.test:runner:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\e17c1f8c07c828a24abfc3f14b2db168\transformed\runner-1.7.0\AndroidManifest.xml:27:9-83
+28-->[androidx.test:runner:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\e17c1f8c07c828a24abfc3f14b2db168\transformed\runner-1.7.0\AndroidManifest.xml:27:18-80
+29    </queries>
+30
+31    <application
+31-->D:\AiChat\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest13249838631809642396.xml:7:5-9:19
+32        android:allowBackup="true"
+32-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:9-35
+33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+33-->[androidx.core:core:1.17.0] C:\Users\22911\.gradle\caches\8.13\transforms\cdb89893e87f3e05118b40058f6f7961\transformed\core-1.17.0\AndroidManifest.xml:28:18-86
+34        android:dataExtractionRules="@xml/data_extraction_rules"
+34-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:9-65
+35        android:debuggable="true"
+36        android:extractNativeLibs="false"
+37        android:fullBackupContent="@xml/backup_rules"
+37-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:13:9-54
+38        android:icon="@mipmap/ic_launcher"
+38-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:14:9-43
+39        android:label="@string/app_name"
+39-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:15:9-41
+40        android:roundIcon="@mipmap/ic_launcher_round"
+40-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:16:9-54
+41        android:supportsRtl="true"
+41-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:17:9-35
+42        android:theme="@style/Theme.AiChat" >
+42-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:18:9-44
+43        <uses-library android:name="android.test.runner" />
+43-->D:\AiChat\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest13249838631809642396.xml:8:9-60
+43-->D:\AiChat\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest13249838631809642396.xml:8:23-57
+44
+45        <activity
+45-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:19:9-29:20
+46            android:name="com.lea.aichat.MainActivity"
+46-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:20:13-55
+47            android:exported="true"
+47-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:21:13-36
+48            android:label="@string/app_name"
+48-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:22:13-45
+49            android:theme="@style/Theme.AiChat" >
+49-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:23:13-48
+50            <intent-filter>
+50-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:24:13-28:29
+51                <action android:name="android.intent.action.MAIN" />
+51-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:25:17-69
+51-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:25:25-66
+52
+53                <category android:name="android.intent.category.LAUNCHER" />
+53-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:27:17-77
+53-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:27:27-74
+54            </intent-filter>
+55        </activity>
+56        <activity
+56-->[androidx.compose.ui:ui-tooling-android:1.9.2] C:\Users\22911\.gradle\caches\8.13\transforms\a13b2a5b27736c744b120bcfcb206a3f\transformed\ui-tooling\AndroidManifest.xml:23:9-25:39
+57            android:name="androidx.compose.ui.tooling.PreviewActivity"
+57-->[androidx.compose.ui:ui-tooling-android:1.9.2] C:\Users\22911\.gradle\caches\8.13\transforms\a13b2a5b27736c744b120bcfcb206a3f\transformed\ui-tooling\AndroidManifest.xml:24:13-71
+58            android:exported="true" />
+58-->[androidx.compose.ui:ui-tooling-android:1.9.2] C:\Users\22911\.gradle\caches\8.13\transforms\a13b2a5b27736c744b120bcfcb206a3f\transformed\ui-tooling\AndroidManifest.xml:25:13-36
+59        <activity
+59-->[androidx.compose.ui:ui-test-manifest:1.9.2] C:\Users\22911\.gradle\caches\8.13\transforms\3fc620e70a2f712037e2011dcb1d4f9a\transformed\ui-test-manifest-1.9.2\AndroidManifest.xml:23:9-26:79
+60            android:name="androidx.activity.ComponentActivity"
+60-->[androidx.compose.ui:ui-test-manifest:1.9.2] C:\Users\22911\.gradle\caches\8.13\transforms\3fc620e70a2f712037e2011dcb1d4f9a\transformed\ui-test-manifest-1.9.2\AndroidManifest.xml:24:13-63
+61            android:exported="true"
+61-->[androidx.compose.ui:ui-test-manifest:1.9.2] C:\Users\22911\.gradle\caches\8.13\transforms\3fc620e70a2f712037e2011dcb1d4f9a\transformed\ui-test-manifest-1.9.2\AndroidManifest.xml:25:13-36
+62            android:theme="@android:style/Theme.Material.Light.NoActionBar" />
+62-->[androidx.compose.ui:ui-test-manifest:1.9.2] C:\Users\22911\.gradle\caches\8.13\transforms\3fc620e70a2f712037e2011dcb1d4f9a\transformed\ui-test-manifest-1.9.2\AndroidManifest.xml:26:13-76
+63        <activity
+63-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:27:9-34:20
+64            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+64-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:28:13-99
+65            android:exported="true"
+65-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:29:13-36
+66            android:theme="@style/WhiteBackgroundTheme" >
+66-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:30:13-56
+67            <intent-filter android:priority="-100" >
+67-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:31:13-33:29
+67-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:31:28-51
+68                <category android:name="android.intent.category.LAUNCHER" />
+68-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:27:17-77
+68-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:27:27-74
+69            </intent-filter>
+70        </activity>
+71        <activity
+71-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:35:9-42:20
+72            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+72-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:36:13-95
+73            android:exported="true"
+73-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:37:13-36
+74            android:theme="@style/WhiteBackgroundTheme" >
+74-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:38:13-56
+75            <intent-filter android:priority="-100" >
+75-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:31:13-33:29
+75-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:31:28-51
+76                <category android:name="android.intent.category.LAUNCHER" />
+76-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:27:17-77
+76-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:27:27-74
+77            </intent-filter>
+78        </activity>
+79        <activity
+79-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:43:9-50:20
+80            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+80-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:44:13-103
+81            android:exported="true"
+81-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:45:13-36
+82            android:theme="@style/WhiteBackgroundDialogTheme" >
+82-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:46:13-62
+83            <intent-filter android:priority="-100" >
+83-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:31:13-33:29
+83-->[androidx.test:core:1.7.0] C:\Users\22911\.gradle\caches\8.13\transforms\3325599a3200351a33181b3f87353afb\transformed\core-1.7.0\AndroidManifest.xml:31:28-51
+84                <category android:name="android.intent.category.LAUNCHER" />
+84-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:27:17-77
+84-->[:app] D:\AiChat\app\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:27:27-74
+85            </intent-filter>
+86        </activity>
+87
+88        <provider
+88-->[androidx.emoji2:emoji2:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\80dec2411d46e948e660101d63343e56\transformed\emoji2-1.4.0\AndroidManifest.xml:24:9-32:20
+89            android:name="androidx.startup.InitializationProvider"
+89-->[androidx.emoji2:emoji2:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\80dec2411d46e948e660101d63343e56\transformed\emoji2-1.4.0\AndroidManifest.xml:25:13-67
+90            android:authorities="com.lea.aichat.test.androidx-startup"
+90-->[androidx.emoji2:emoji2:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\80dec2411d46e948e660101d63343e56\transformed\emoji2-1.4.0\AndroidManifest.xml:26:13-68
+91            android:exported="false" >
+91-->[androidx.emoji2:emoji2:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\80dec2411d46e948e660101d63343e56\transformed\emoji2-1.4.0\AndroidManifest.xml:27:13-37
+92            <meta-data
+92-->[androidx.emoji2:emoji2:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\80dec2411d46e948e660101d63343e56\transformed\emoji2-1.4.0\AndroidManifest.xml:29:13-31:52
+93                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+93-->[androidx.emoji2:emoji2:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\80dec2411d46e948e660101d63343e56\transformed\emoji2-1.4.0\AndroidManifest.xml:30:17-75
+94                android:value="androidx.startup" />
+94-->[androidx.emoji2:emoji2:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\80dec2411d46e948e660101d63343e56\transformed\emoji2-1.4.0\AndroidManifest.xml:31:17-49
+95            <meta-data
+95-->[androidx.lifecycle:lifecycle-process:2.10.0] C:\Users\22911\.gradle\caches\8.13\transforms\94fdb6005680f18af44ff657be44d7a0\transformed\lifecycle-process-2.10.0\AndroidManifest.xml:29:13-31:52
+96                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+96-->[androidx.lifecycle:lifecycle-process:2.10.0] C:\Users\22911\.gradle\caches\8.13\transforms\94fdb6005680f18af44ff657be44d7a0\transformed\lifecycle-process-2.10.0\AndroidManifest.xml:30:17-78
+97                android:value="androidx.startup" />
+97-->[androidx.lifecycle:lifecycle-process:2.10.0] C:\Users\22911\.gradle\caches\8.13\transforms\94fdb6005680f18af44ff657be44d7a0\transformed\lifecycle-process-2.10.0\AndroidManifest.xml:31:17-49
+98            <meta-data
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+99                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+99-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+100                android:value="androidx.startup" />
+100-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+101        </provider>
+102
+103        <receiver
+103-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+104            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+104-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+105            android:directBootAware="false"
+105-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+106            android:enabled="true"
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+107            android:exported="true"
+107-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+108            android:permission="android.permission.DUMP" >
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+109            <intent-filter>
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+110                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+110-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+110-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+111            </intent-filter>
+112            <intent-filter>
+112-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+113                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+113-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+113-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+114            </intent-filter>
+115            <intent-filter>
+115-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+116                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+116-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+116-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+117            </intent-filter>
+118            <intent-filter>
+118-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+119                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+119-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+119-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\22911\.gradle\caches\8.13\transforms\9cf409ca75feb8e68084e0689ea35f17\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+120            </intent-filter>
+121        </receiver>
+122
+123        <service
+123-->[androidx.room:room-runtime:2.6.1] C:\Users\22911\.gradle\caches\8.13\transforms\8b6ff994ad9c4f813105cb851d0dd3a7\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+124            android:name="androidx.room.MultiInstanceInvalidationService"
+124-->[androidx.room:room-runtime:2.6.1] C:\Users\22911\.gradle\caches\8.13\transforms\8b6ff994ad9c4f813105cb851d0dd3a7\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+125            android:directBootAware="true"
+125-->[androidx.room:room-runtime:2.6.1] C:\Users\22911\.gradle\caches\8.13\transforms\8b6ff994ad9c4f813105cb851d0dd3a7\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+126            android:exported="false" />
+126-->[androidx.room:room-runtime:2.6.1] C:\Users\22911\.gradle\caches\8.13\transforms\8b6ff994ad9c4f813105cb851d0dd3a7\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+127    </application>
+128
+129</manifest>

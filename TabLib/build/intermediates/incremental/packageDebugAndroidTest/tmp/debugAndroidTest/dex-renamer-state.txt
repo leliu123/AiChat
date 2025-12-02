@@ -1,0 +1,13 @@
+#Fri Nov 28 20:29:29 CST 2025
+base.0=D\:\\AiChat\\TabLib\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
+base.1=D\:\\AiChat\\TabLib\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+base.2=D\:\\AiChat\\TabLib\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\11\\classes.dex
+base.3=D\:\\AiChat\\TabLib\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes2.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=11/classes.dex
+path.3=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex
+renamed.3=classes4.dex

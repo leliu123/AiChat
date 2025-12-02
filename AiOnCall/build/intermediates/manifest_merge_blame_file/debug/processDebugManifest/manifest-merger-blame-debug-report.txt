@@ -1,0 +1,53 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="com.lea.aichat" >
+5
+6    <uses-sdk android:minSdkVersion="24" />
+7
+8    <uses-permission android:name="android.permission.INTERNET" />
+8-->D:\AiChat\app\src\main\AndroidManifest.xml:4:5-67
+8-->D:\AiChat\app\src\main\AndroidManifest.xml:4:22-64
+9
+10    <application
+10-->D:\AiChat\app\src\main\AndroidManifest.xml:5:5-25:19
+11        android:allowBackup="true"
+11-->D:\AiChat\app\src\main\AndroidManifest.xml:6:9-35
+12        android:dataExtractionRules="@xml/data_extraction_rules"
+12-->D:\AiChat\app\src\main\AndroidManifest.xml:7:9-65
+13        android:fullBackupContent="@xml/backup_rules"
+13-->D:\AiChat\app\src\main\AndroidManifest.xml:8:9-54
+14        android:icon="@mipmap/ic_launcher"
+14-->D:\AiChat\app\src\main\AndroidManifest.xml:9:9-43
+15        android:label="@string/app_name"
+15-->D:\AiChat\app\src\main\AndroidManifest.xml:10:9-41
+16        android:roundIcon="@mipmap/ic_launcher_round"
+16-->D:\AiChat\app\src\main\AndroidManifest.xml:11:9-54
+17        android:supportsRtl="true"
+17-->D:\AiChat\app\src\main\AndroidManifest.xml:12:9-35
+18        android:theme="@style/Theme.AiChat" >
+18-->D:\AiChat\app\src\main\AndroidManifest.xml:13:9-44
+19        <activity
+19-->D:\AiChat\app\src\main\AndroidManifest.xml:14:9-24:20
+20            android:name="com.lea.aichat.MainActivity"
+20-->D:\AiChat\app\src\main\AndroidManifest.xml:15:13-41
+21            android:exported="true"
+21-->D:\AiChat\app\src\main\AndroidManifest.xml:16:13-36
+22            android:label="@string/app_name"
+22-->D:\AiChat\app\src\main\AndroidManifest.xml:17:13-45
+23            android:theme="@style/Theme.AiChat" >
+23-->D:\AiChat\app\src\main\AndroidManifest.xml:18:13-48
+24            <intent-filter>
+24-->D:\AiChat\app\src\main\AndroidManifest.xml:19:13-23:29
+25                <action android:name="android.intent.action.MAIN" />
+25-->D:\AiChat\app\src\main\AndroidManifest.xml:20:17-69
+25-->D:\AiChat\app\src\main\AndroidManifest.xml:20:25-66
+26
+27                <category android:name="android.intent.category.LAUNCHER" />
+27-->D:\AiChat\app\src\main\AndroidManifest.xml:22:17-77
+27-->D:\AiChat\app\src\main\AndroidManifest.xml:22:27-74
+28            </intent-filter>
+29        </activity>
+30    </application>
+31
+32</manifest>

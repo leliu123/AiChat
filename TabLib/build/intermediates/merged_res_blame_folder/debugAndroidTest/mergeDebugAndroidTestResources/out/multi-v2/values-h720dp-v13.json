@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.lea.tablib.test.TabLib-mergeDebugAndroidTestResources-33:/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\22911\\.gradle\\caches\\8.13\\transforms\\7408c21f4f107317f556f0c303cd9f4c\\transformed\\appcompat-1.7.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}
